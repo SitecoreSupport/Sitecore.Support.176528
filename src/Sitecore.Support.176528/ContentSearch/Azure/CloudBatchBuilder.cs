@@ -70,7 +70,7 @@
                             ? uniqueid.ToString()
                             : "UNKNOWN";
                         CrawlingLog.Log.Warn(string.Format("Length of the '{0}' field is {1} which exceeds maximum allowed length {2}. Document: {3}. See {4} for details.", field.Key, json.Length, AzureSearchMaxTermSize, uniqueidString, AzureSearchLimitationsDoc));
-                        break;
+                        fieldValue = null;
                     }
                     dictionary.Add(field.Key, fieldValue);
                 }
